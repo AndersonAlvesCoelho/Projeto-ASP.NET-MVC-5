@@ -9,14 +9,14 @@
 <code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/bootstrap/bootstrap.png"></code>
 
 <div align="center">
-    <h3>< Green News</h3>
+    <h3>Green News</h3>
     <img  src="https://cdn.discordapp.com/attachments/384754969800212480/774011200199196683/unknown.png">
 </div>
 
 
 ## 💡 Sobre o projeto
 
-Este projeto tem como intuito criar uma aplicação em ASP.NET MVC 5, colocar em pratica o que foi ensinado pelo professo Wesley da faculdade UDF.
+Este projeto tem como intuito criar uma aplicação em ASP.NET MVC 5, colocando em pratica o que foi ensinado pelo professo **Wesley** da faculdade UDF.
 
 
 ##### Atividades finalizadas
