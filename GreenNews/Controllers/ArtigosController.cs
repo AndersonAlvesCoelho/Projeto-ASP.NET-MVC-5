@@ -29,7 +29,7 @@ namespace GreenNews.Controllers
             string campo = chave.Replace("sort[", String.Empty).Replace("]", String.Empty);
 
             var artigos = db.Artigos.Include(a => a.Tag);
-            int total = artigos.Count();
+            int total = artigos.Count();    
 
             if (!string.IsNullOrWhiteSpace(searchPhrase) )
             {
