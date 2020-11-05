@@ -1,10 +1,10 @@
 ﻿@model GreenNews.Models.Artigo
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar";
 }
 
-<h2>Edit</h2>
+<h2>@ViewBag.Title</h2>
 
 
 @using (Html.BeginForm("Edit", "Artigos", FormMethod.Post, new { id = "formCrud" }))
