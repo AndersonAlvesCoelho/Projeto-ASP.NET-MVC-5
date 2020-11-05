@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Listar Artigos";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    <a href="#" class="btn btn-success" data-action="Create">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        Novo Artigo
+    </a>
+</p>
+
+
+
+<table id="gridDados" class="table table-striped">
+    <thead>
+        <tr>
+            <th data-column-id="Titulo" data-order="asc">Título</th>
+            <th data-column-id="Autor">Autor</th>
+            <th data-column-id="DataCriacao">Ano da Publicação</th>
+            <th data-formatter="acoes"></th>
+        </tr>
+    </thead>
+</table>
+
+<div class="modal fade" id="minhaModal" tabindex="-1" role="dialog" aria-labelledby="myModalLavel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="conteudoModal"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Scripts/jquery.bootgrid.js"></script>
+    <script src="~/Scripts/Projeto/ControlarGrid.js"></script>
+    <script type="text/javascript">
+
+        var controller = "Artigos";
+
+        var urlListar = "@Url.Action("Listar")";
+
+        $(document).ready(configurarControles);
+
+
+    </script>
+}
+
