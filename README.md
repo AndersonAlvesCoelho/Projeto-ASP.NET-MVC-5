@@ -26,7 +26,7 @@ Este projeto tem como intuito criar uma aplicação em ASP.NET MVC 5, colocando 
 - [x] CRUD
 - [x] Paginação
 - [x] Filtro de pesquisa
-- [ ] Relatorio  
+- [x] Relatorio  
 
 ## :mortar_board: Problema que ocorreram no projeto
 #### :x: Conexão com o B.D
@@ -34,6 +34,3 @@ A aplicação não estava realizando conexão com o banco de dados. Verificando 
 
 #### :x: ArtigoInit
 Tinha dificuldades de inicializar o projetos com os dados predefinidos, porém a aplicação cadastrava normalmente os dados no banco de dados
-
-#### :x: Relatorio
-Com as dificuldades citadas logo acima e outro problemas ao decorrer da criação da aplicação, não conseguir criar o relatorio de dados.
