@@ -1,6 +1,9 @@
-﻿using System;
+﻿using GreenNews.DataBase;
+using GreenNews.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Dynamic;
 using System.Web;
 using System.Web.Mvc;
 
@@ -8,23 +11,58 @@ namespace GreenNews.Controllers
 {
     public class HomeController : Controller
     {
+        public ArtigoContexto db = new ArtigoContexto();
+
         public ActionResult Index()
         {
+            ViewBag.nome = NomeTags();
+            ViewBag.qtdArtigo = ContarTagsArtigos();
+
             return View();
         }
 
-        public ActionResult About()
+        // P
+        public List<string> NomeTags()
         {
-            ViewBag.Message = "Your application description page.";
+            var catTag = new List<string>();
 
-            return View();
+            foreach (Tag t in db.Tags)
+            {
+                catTag.Add(t.Nome);
+            }
+
+            return catTag;
         }
 
-        public ActionResult Contact()
+        public int ArtigoPorTag(int Id)
         {
-            ViewBag.Message = "Your contact page.";
+            var artTag = db.Artigos.Where($"TagId == {Id}");
 
-            return View();
+            int  qtdArtTag = artTag.Count();
+
+            return qtdArtTag;
         }
+
+        public int CountTags()
+        {
+            var qtdTags = db.Tags.Count();
+
+            return qtdTags;
+        }
+
+        public List<int> ContarTagsArtigos()
+        {
+            var nTags = new List<int>();
+
+            for (int i = 0; i < CountTags(); i++)
+            {
+                nTags.Add(ArtigoPorTag(i+1));
+            }
+
+            return nTags;
+        }
+
+
+
     }
 }
