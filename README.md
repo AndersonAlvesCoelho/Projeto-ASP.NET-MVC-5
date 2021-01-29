@@ -28,9 +28,3 @@ Este projeto tem como intuito criar uma aplicação em ASP.NET MVC 5, colocando 
 - [x] Filtro de pesquisa
 - [x] Relatorio  
 
-## :mortar_board: Problema que ocorreram no projeto
-#### :x: Conexão com o B.D
-A aplicação não estava realizando conexão com o banco de dados. Verificando o arquivo de conexão **ArtigoContexto.cs** e também **Web.config** conseguir resolver a conexão com o banco. Sem saber o motivo da solução. 
-
-#### :x: ArtigoInit
-Tinha dificuldades de inicializar o projetos com os dados predefinidos, porém a aplicação cadastrava normalmente os dados no banco de dados
